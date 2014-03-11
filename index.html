@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <section id='main' class='active-section'>
+        <label for='window'>Window size: </label>
+        <input type='number' name='window' id='window' min='1' step='1' value='1'><br>
+        <input type='button' id='webgl' value='Render WebGL graph' disabled>
+        <div id='container'>
+            <canvas id='canvas'></canvas>
+        </div>
+        <svg id='histogram' width='256' height='100'></svg><br>
+        <label for='scale'>Scale 1:</label>
+        <input name='scale' id='scale' type='number' min='1' step='1' value='1'><br>
+        <input type='button' id='download' value='Download as png file'>
+        <input type='button' id='fullscreen' value='View in fullscreen'>
+        <a id='ghostAnchor'></a>
+    </section>
+    <section id='settings'>
+        Settings
+    </section>
+    <section id='matrices'>
+        List of available matrices
+    </section>
+    <section id='newMatrix'>
+        Add a new matrix
+    </section>
+    <section id='sequences'>
+        List of recorded sequences
+    </section>
+    <section id='newSequence'>
+        Add a new sequence
+    </section>
+    <script src='scripts/functions.js'></script>
+    <script src='scripts/script.js'></script>
+</body>
+</html>
