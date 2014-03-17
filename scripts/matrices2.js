@@ -5,10 +5,20 @@ function Comparaison(parameters){
     //seq obtenu par la function Sequence
     var seq1 = parameters.seq1; // prompt("entrez la seq1")
     var seq2 = parameters.seq2;
-    var w = seq1.length, h = seq2.length;
+    //var seq1=[]; // prompt("entrez la seq1")
+    //var seq2=[];
+    var w = seq1.length, 
+        h = seq2.length;
     var dotplot = new Uint8Array(w * h * 4);
     //pour l'instant on ne gère la comparaison que pour 2 meme types de sequences
     //Et on verifie que le type de matrice correspond bien au type de sequence
+    /*
+    if (typeof parameters.name === "undefined") {
+        this.name = "custom";
+    } else {
+        this.name = parameters.name;
+    }
+    */
     if (seq1.dna === matrice.dna){
         if (seq1.dna){
             var typeSeq = matrice.dnaSeq;
@@ -18,6 +28,8 @@ function Comparaison(parameters){
     } else {
         throw "matrice not match";
     }
+    //var initSeq1 = (seq1.dna ? dnaSeq : aaSeq);
+    //var initSeq2 = (seq1.dna ? dnaSeq : aaSeq);
     for (var i = 0; i < w; i++) {
 		    for (var j = 0; j < h; j++) {
                 for(var k = 0; i<typeSeq.length;k++){
