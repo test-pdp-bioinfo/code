@@ -165,7 +165,19 @@ var comp = new Comparaison({
     seq1: Sequence(a),
     seq2: Sequence(b)
 });
-
+//Fonction pour recuperer une matrice propre avec son type et son nom
 function Sequence(parameters){
-    //this.dna
+	this.name = parameters.name; // On prend le nom comme sur dotlet ? A la limite si on recois un fichier fasta, on peut recup le nom dans la premiere ligne
+	var dnaSeq = ["A", "C", "G", "T", "X"];
+	var STRING1 = parameters.strg;
+	STRING1 = STRING1.toUpperCase();
+	STRING1 = STRING1.toUpperCase();
+	for (var i = 0; i < w; i++) {
+		for (var j = 0; j < w; j++) {
+			if (seq2.charCodeAt(j) !== dnaSeq[j]) {
+				this.dna = false;
+			}
+		}
+	}
 }
+
